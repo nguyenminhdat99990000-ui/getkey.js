@@ -1,7 +1,4 @@
 exports.handler = async function () {
-  const random = Math.random().toString(16).slice(2, 18).toUpperCase();
-  const key = "KEY-" + random;
-
   return {
     statusCode: 200,
     headers: {
@@ -9,7 +6,7 @@ exports.handler = async function () {
     },
     body: JSON.stringify({
       success: true,
-      key: key
+      message: "API hoạt động"
     })
   };
 };
